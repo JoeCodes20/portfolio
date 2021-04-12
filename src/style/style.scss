@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display";
+}
+.App {
+  overflow-x: hidden;
+}
+.main {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  .main-container {
+    max-width: 1608px;
+    margin: 0 auto;
+    .header {
+      width: 85%;
+      position: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      top: 5%;
+      z-index: 99;
+    }
+    .main-btn {
+      position: absolute;
+      top: 800px;
+      padding: 0.5em 2em;
+      font-size: 25px;
+      cursor: pointer;
+      color: black;
+      opacity: 0.7;
+      background-color: white;
+      border: 1px solid black;
+      transition: 0.3s;
+      letter-spacing: 2px;
+    }
+    .scroll {
+      position: absolute;
+      top: 95%;
+      left: 50%;
+      opacity: 0.5;
+      color: black;
+      font-size: 3em;
+      transform: translateX(-50%);
+    }
+  }
+  .main-btn:hover {
+    color: white;
+    background-color: black;
+  }
+}
+
+.logo {
+  // position: fixed;
+  display: flex;
+  align-items: center;
+  img {
+    width: 110px;
+    height: auto;
+  }
+  .logo-text {
+    margin-left: 20px;
+    letter-spacing: 2px;
+    p {
+      opacity: 0.6;
+      font-size: 19px;
+      margin-left: 185px;
+      transition: 0.3s;
+    }
+    h2 {
+      font-size: 35px;
+      color: rgb(0, 0, 0);
+    }
+  }
+}
+.nav {
+  position: absolute;
+  right: 0;
+  a {
+    color: white;
+    font-size: 1.7em;
+    // text-decoration: none;
+    margin: 0 1.5em;
+    text-shadow: 5px 2px 5px black;
+    transition: 0.3s;
+  }
+  .nav-mobile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    color: black;
+  }
+}
+.hero-body {
+  position: absolute;
+  top: 350px;
+  display: flex;
+  .hero-text {
+    position: relative;
+    letter-spacing: 2px;
+    .text {
+      p {
+        position: absolute;
+        font-size: 20px;
+        opacity: 0.7;
+        top: 50px;
+        left: 250px;
+      }
+      h2 {
+        font-size: 60px;
+        margin-bottom: -0.7em;
+      }
+      h3 {
+        font-size: 100px;
+      }
+    }
+    .desc {
+      max-width: 850px;
+      opacity: 0.7;
+      font-size: 1.2em;
+    }
+  }
+
+  .hero-img {
+    position: absolute;
+    margin-left: 5em;
+    img {
+      z-index: 2;
+      position: relative;
+      width: 500px;
+      filter: grayscale(100%);
+      transition: 0.3s;
+    }
+    .whiteBg {
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      background: white;
+      box-shadow: 2px 4px 25px black;
+      top: 110px;
+      right: 20px;
+      margin-top: -15em;
+      z-index: 1;
+      opacity: 0.2;
+    }
+    .blackBg {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: rgb(0, 0, 0);
+      box-shadow: 2px 4px 25px black;
+      top: 300px;
+      right: -80px;
+      margin-top: -15em;
+      z-index: 0;
+      opacity: 0.8;
+    }
+  }
+}
+//Nav mobile
+.hidden {
+  display: none;
+}
+
+//Projects
+.projects {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  .project-title {
+    position: absolute;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    top: 5%;
+    left: 8%;
+    h2 {
+      font-size: 60px;
+      span {
+        font-size: 100px;
+      }
+    }
+  }
+  .section-effect {
+    position: absolute;
+    color: white;
+    letter-spacing: 10px;
+    font-family: "Poppins";
+    font-size: 8em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 8px black;
+    opacity: 0.15;
+  }
+  .projects-container {
+    position: relative;
+    left: 3%;
+    max-width: 1208px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-row-gap: 40px;
+    article {
+      position: relative;
+      width: 300px;
+      height: 700px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 5px 2px 10px black;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border-top-right-radius: 20px;
+      top: 35%;
+      img {
+        position: relative;
+        filter: grayscale(100%);
+        transform: translateX(-750px);
+        transition: 0.3s;
+        width: 500%;
+        opacity: 0.7;
+        z-index: 1;
+      }
+      .project-info {
+        h2 {
+          font-size: 20px;
+          position: absolute;
+          z-index: 2;
+          top: 0;
+          padding-top: 20px;
+          left: 0;
+          letter-spacing: 2px;
+          background: white;
+          width: 300px;
+          text-align: center;
+          height: 80px;
+          span {
+            font-family: "Allura";
+            font-size: 3em;
+          }
+          opacity: 0;
+          transition: 0.3s;
+          text-shadow: 2px 2px 5px black;
+        }
+        p {
+          color: rgb(0, 0, 0);
+          font-size: 1.2em;
+          position: absolute;
+          z-index: 2;
+          background: white;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+          top: 30%;
+          height: 400px;
+          padding: 20px;
+          max-width: 300px;
+          opacity: 0;
+          transition: 0.3s;
+          box-shadow: 5px 2px 10px black;
+        }
+      }
+    }
+  }
+  .projects-container article:hover {
+    img {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+    h2 {
+      opacity: 1;
+    }
+    p {
+      opacity: 1;
+    }
+  }
+}
+
+.contact {
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+  max-width: 1608px;
+  margin: 0 auto;
+  .contact-container {
+    // position: relative;
+    .contact-title {
+      position: absolute;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      top: 50px;
+      left: 0%;
+      h2 {
+        font-size: 60px;
+        span {
+          font-size: 100px;
+        }
+      }
+    }
+    .contact-section {
+      position: absolute;
+      width: 1400px;
+      height: 600px;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%);
+      background: white;
+      box-shadow: 2px 2px 95px black;
+      .section-title {
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform: translateX(-50%);
+        font-size: 4em;
+        h2 {
+          font-family: "Allura";
+        }
+      }
+      .section-text {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        letter-spacing: 2px;
+        bottom: 5%;
+        font-size: 20px;
+        .text {
+          max-width: 800px;
+          margin: 0 40px;
+        }
+        .information {
+          p {
+            max-width: 600px;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+          }
+        }
+        .connect {
+          .social {
+            font-size: 2em;
+            .icon {
+              margin: 0 5px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Hover effcts
+.hero-img img:hover {
+  filter: grayscale(0%);
+}
+.logo-text p:hover {
+  margin-left: 160px;
+  font-size: 25px;
+  opacity: 1;
+}
+.nav a:hover {
+  font-size: 1.8em;
+  text-decoration: none;
+  color: black;
+  box-shadow: 2px 4px 25px white;
+  text-shadow: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
