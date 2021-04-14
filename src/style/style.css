@@ -11,20 +11,12 @@
 
 .App {
   overflow-x: hidden;
+  text-decoration: none;
 }
 
-.main {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-}
-
-.main .main-container {
+.App .header {
   max-width: 1608px;
   margin: 0 auto;
-}
-
-.main .main-container .header {
   width: 85%;
   position: fixed;
   display: -webkit-box;
@@ -37,7 +29,47 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   top: 5%;
+  left: 8%;
   z-index: 99;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navBg {
+  position: absolute;
+  z-index: 98;
+  background: black;
+  width: 100%;
+  height: 105px;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.home {
+  opacity: 0;
+  -webkit-transform: translateY(-120px);
+          transform: translateY(-120px);
+}
+
+.shift {
+  -webkit-transform: translateY(-50px) scale(0.9);
+          transform: translateY(-50px) scale(0.9);
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.main .main-container {
+  max-width: 1608px;
+  margin: 0 auto;
 }
 
 .main .main-container .main-btn {
@@ -219,8 +251,8 @@
   position: absolute;
   text-transform: uppercase;
   letter-spacing: 2px;
-  top: 5%;
-  left: 8%;
+  top: 8%;
+  left: 3%;
 }
 
 .projects .project-title h2 {
@@ -238,11 +270,11 @@
   font-family: "Poppins";
   font-size: 8em;
   top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  left: 90%;
+  -webkit-transform: translate(-90%, -50%);
+          transform: translate(-90%, -50%);
   text-shadow: 2px 2px 8px black;
-  opacity: 0.15;
+  opacity: 0.1;
 }
 
 .projects .projects-container {
@@ -275,11 +307,11 @@
   position: relative;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
-  -webkit-transform: translateX(-750px);
-          transform: translateX(-750px);
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  width: 500%;
+  width: 120%;
   opacity: 0.7;
   z-index: 1;
 }
@@ -340,6 +372,147 @@
   opacity: 1;
 }
 
+.projects .view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: white;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.projects .view .closeBtn {
+  position: absolute;
+  font-size: 4em;
+  top: 2%;
+  left: 3%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.projects .view .link {
+  position: absolute;
+  top: 78%;
+  right: 10%;
+  font-size: 3em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0.7;
+}
+
+.projects .view .link a {
+  color: black;
+}
+
+.projects .view .views {
+  position: relative;
+  background: black;
+  width: 1550px;
+  height: 720px;
+  top: 3%;
+  left: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 99;
+  overflow: hidden;
+}
+
+.projects .view .views img {
+  min-width: 300px;
+}
+
+.projects .view .views .desktop-view {
+  position: absolute;
+  top: 0;
+  left: 12%;
+  z-index: 20;
+}
+
+.projects .view .views .desktop-view img {
+  width: 800px;
+}
+
+.projects .view .views .tablet-view {
+  position: absolute;
+  z-index: 19;
+  bottom: 0;
+  left: 12%;
+}
+
+.projects .view .views .tablet-view img {
+  width: 400px;
+}
+
+.projects .view .views .mobile-view {
+  position: absolute;
+  right: 10.5%;
+  top: 0;
+  z-index: 18;
+}
+
+.projects .view .views .mobile-view img {
+  width: 400px;
+  height: 720px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.projects .view .view-text {
+  position: absolute;
+  letter-spacing: 2px;
+  top: 80%;
+  left: 10%;
+}
+
+.projects .view .view-text h2 {
+  font-size: 2em;
+}
+
+.projects .view .view-text p {
+  font-size: 1.3em;
+  max-width: 1100px;
+}
+
+.projects .view .link:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.projects .viewOverlayBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  z-index: 998;
+}
+
+.projects .closeBtn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.projects .displayProject {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.projects .overlayBg {
+  opacity: 0.6;
+}
+
 .contact {
   position: relative;
   height: 100vh;
@@ -352,8 +525,8 @@
   position: absolute;
   text-transform: uppercase;
   letter-spacing: 2px;
-  top: 50px;
-  left: 0%;
+  top: 80px;
+  left: 3%;
 }
 
 .contact .contact-container .contact-title h2 {
@@ -373,8 +546,8 @@
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
   background: white;
-  -webkit-box-shadow: 2px 2px 95px black;
-          box-shadow: 2px 2px 95px black;
+  -webkit-box-shadow: 0px 0px 25px black;
+          box-shadow: 0px 0px 25px black;
 }
 
 .contact .contact-container .contact-section .section-title {
@@ -413,15 +586,21 @@
   max-width: 600px;
   letter-spacing: 1px;
   margin-bottom: 20px;
+  opacity: 0.7;
 }
 
 .contact .contact-container .contact-section .section-text .connect .social {
   font-size: 2em;
 }
 
-.contact .contact-container .contact-section .section-text .connect .social .icon {
+.contact .contact-container .contact-section .section-text .connect .social a {
+  color: black;
   margin: 0 5px;
   cursor: pointer;
+}
+
+.contact .contact-container .contact-section .section-text .skills ul li {
+  list-style: none;
 }
 
 .hero-img img:hover {
@@ -439,8 +618,6 @@
   font-size: 1.8em;
   text-decoration: none;
   color: black;
-  -webkit-box-shadow: 2px 4px 25px white;
-          box-shadow: 2px 4px 25px white;
   text-shadow: none;
   text-transform: uppercase;
   letter-spacing: 2px;

@@ -1,11 +1,15 @@
 import React from "react"
 import LogoImg from "../../images/newlogo.png"
+import {Link} from "react-router-dom"
 
-function Logo(){
+
+function Logo({home}){
        return(
               <div className="logo">
                      <div className="logo-img">
-                            <img src={LogoImg} alt=""/>
+                            <Link to="./">
+                            <img src={LogoImg} alt="" onClick={home}/>
+                            </Link>
                      </div>
                      <div className="logo-text">
                             <p>Joseph Adeyanju</p>

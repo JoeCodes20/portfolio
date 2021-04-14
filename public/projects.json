@@ -1,0 +1,26 @@
+{
+       "component-builder":{
+              "title": "Component Builder",
+              "desc": "A web project built to make the components selection faster for self built PCs, by presenting you with 3 different paths to choose from, while understanding how your path will perform with games.  Built with the latest Javascript features such object oriented programming classes, async, and structured with reusable code.",
+              "DTImg": "/screenshot/com-desktop.png",
+              "TImg": "/screenshot/com-tablet.png",
+              "MImg": "/screenshot/com-mobile.png",
+              "Link": "https://custombulderpc.netlify.app/"
+       },
+       "main-stream":{
+              "title": "Main Stream",
+              "desc": "A web app built with pure Javascript, html, and Scss. This web app allows you to watch the live trailers from a few of the top anime series. Made with less than 180 lines of code and styled with responsiveness in mind.",
+              "DTImg": "/screenshot/main-desktop.jpg",
+              "TImg": "/screenshot/main-tablet.jpg",
+              "MImg": "/screenshot/main-mobile.png",
+              "Link" : "https://main-stream-watcher.netlify.app/"
+       },
+       "e-commerce":{
+              "title": "E-commerce",
+              "desc": "An ecommerce site where you can choose the part of a computer you would like and add it to the virtual cart. Built with Javascript, Html, Scss.",
+              "DTImg": "/screenshot/shop-desktop.jpg",
+              "TImg": "/screenshot/shop-tablet.jpg",
+              "MImg": "/screenshot/shop-mobile.png",
+              "Link": "https://pc-ecommerce.netlify.app/"
+       }
+}

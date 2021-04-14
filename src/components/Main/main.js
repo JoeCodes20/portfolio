@@ -1,19 +1,16 @@
 import React from "react"
-import Logo from "./logo"
-import Nav from "./nav"
 import HeroText from "./heroText"
 import HeroImg from "./heroImg"
 import "../../style/style.css"
-import {RiArrowDropDownLine} from "react-icons/ri"
+import {Link} from "react-router-dom"
+import {motion} from "framer-motion"
+import {pageAnimation} from "../../animation"
+import {first} from "../../animation"
 
-function Main(){
+function Main({navigate}){
        return(
-              <div className="main">
+              <motion.div variants={pageAnimation} initial="hidden" animate="show" className="main">
                      <div className="main-container">
-                            <div className="header">
-                                   <Logo />
-                                   <Nav />
-                            </div>
                             <div className="hero-body">
                                    <div>
                                           <HeroText />
@@ -22,12 +19,11 @@ function Main(){
                                           <HeroImg />
                                    </div>
                             </div>
-                            <button className="main-btn">Explore</button>
+                            <Link to="./projects"><motion.button className="main-btn" onClick={navigate} variants={first}>Explore</motion.button></Link>
                             <div>
-                                   <RiArrowDropDownLine className="scroll"/>
                             </div>
                      </div>
-              </div>
+              </motion.div>
               
        )
 }

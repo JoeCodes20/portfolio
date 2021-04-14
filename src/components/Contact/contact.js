@@ -3,10 +3,12 @@ import {FaLinkedin} from "react-icons/fa"
 import {FaGithub} from "react-icons/fa"
 import {FaTwitter} from "react-icons/fa"
 import {FaFacebookSquare} from "react-icons/fa"
+import {motion} from "framer-motion"
+import {pageAnimation} from "../../animation"
 
 function Contact(){
        return(
-              <div className="contact">
+              <motion.div variants={pageAnimation} initial="hidden" animate="show" className="contact">
                      <div className="contact-container">
                             <div className="contact-title">
                                    <h2><span>C</span>ontact</h2>
@@ -20,23 +22,26 @@ function Contact(){
                                           <div className="information text">
                                                  <h2>Personal Information</h2>
                                                  <hr/>
-                                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero perferendis accusamus quisquam non eum, hic dolores nesciunt consectetur consequatur repellat in, quibusdam totam labore architecto nihil quaerat laborum odit illo.</p>
+                                                 <br/>
+                                                 <p>I much rather prefer we communicate through email due to the fact, I might be busy or our time simply does not mach. But in any case here is my personal email and phone number.</p>
                                                  <h4>Email: <span>TransparentVfx@gmail.com</span></h4>
                                                  <h4>Phone: <span>+1 317-480-2920</span></h4>
                                           </div>
                                           <div className="connect text">
-                                                 <h2>Connect</h2>
+                                                 <h2>Connect</h2>                                      
                                                  <hr/>
+                                                 <br/>
                                                  <div className="social">
-                                                 <FaGithub className='icon'/>
-                                                 <FaLinkedin className='icon'/>
-                                                 <FaTwitter className='icon'/>
-                                                 <FaFacebookSquare className='icon'/>
+                                                 <a href="https://github.com/JoeCodes20"><FaGithub /></a>
+                                                 <a href="https://www.linkedin.com/in/joseph-adeyanju-669942200/"><FaLinkedin /></a>
+                                                 <a href="https://twitter.com/JosephCoding"><FaTwitter /></a>
+                                                 <a href=""><FaFacebookSquare /></a>
                                                  </div>
                                           </div>
                                           <div className="skills text">
                                                  <h2>Skills</h2>
                                                  <hr/>
+                                                 <br/>
                                                  <ul>
                                                         <li>JavaScript</li>
                                                         <li>React</li>
@@ -50,7 +55,7 @@ function Contact(){
                                    </div>
                             </div>
                      </div>
-              </div>
+              </motion.div>
        )
 }
 

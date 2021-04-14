@@ -10,6 +10,39 @@
 }
 .App {
   overflow-x: hidden;
+  .header {
+    max-width: 1608px;
+    margin: 0 auto;
+    width: 85%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 5%;
+    left: 8%;
+    z-index: 99;
+    transition: 0.3s;
+  }
+  text-decoration: none;
+}
+.navBg {
+  position: absolute;
+  z-index: 98;
+  background: black;
+  width: 100%;
+  height: 105px;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  transition: 0.3s;
+  transform: translateY(0px);
+}
+.home {
+  opacity: 0;
+  transform: translateY(-120px);
+}
+.shift {
+  transform: translateY(-50px) scale(0.9);
 }
 .main {
   width: 100vw;
@@ -18,15 +51,6 @@
   .main-container {
     max-width: 1608px;
     margin: 0 auto;
-    .header {
-      width: 85%;
-      position: fixed;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      top: 5%;
-      z-index: 99;
-    }
     .main-btn {
       position: absolute;
       top: 800px;
@@ -179,8 +203,8 @@
     position: absolute;
     text-transform: uppercase;
     letter-spacing: 2px;
-    top: 5%;
-    left: 8%;
+    top: 8%;
+    left: 3%;
     h2 {
       font-size: 60px;
       span {
@@ -195,10 +219,10 @@
     font-family: "Poppins";
     font-size: 8em;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 90%;
+    transform: translate(-90%, -50%);
     text-shadow: 2px 2px 8px black;
-    opacity: 0.15;
+    opacity: 0.1;
   }
   .projects-container {
     position: relative;
@@ -222,9 +246,9 @@
       img {
         position: relative;
         filter: grayscale(100%);
-        transform: translateX(-750px);
+        transform: translateX(0px);
         transition: 0.3s;
-        width: 500%;
+        width: 120%;
         opacity: 0.7;
         z-index: 1;
       }
@@ -280,6 +304,118 @@
       opacity: 1;
     }
   }
+  .view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: white;
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
+    .closeBtn {
+      position: absolute;
+      font-size: 4em;
+      top: 2%;
+      left: 3%;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .link {
+      position: absolute;
+      top: 78%;
+      right: 10%;
+      font-size: 3em;
+      transition: 0.3s;
+      opacity: 0.7;
+      a {
+        color: black;
+      }
+    }
+    .views {
+      position: relative;
+      background: rgb(0, 0, 0);
+      width: 1550px;
+      height: 720px;
+      top: 3%;
+      left: 10%;
+      display: flex;
+      z-index: 99;
+      overflow: hidden;
+      img {
+        min-width: 300px;
+      }
+      .desktop-view {
+        position: absolute;
+        top: 0;
+        left: 12%;
+        img {
+          width: 800px;
+        }
+        z-index: 20;
+      }
+      .tablet-view {
+        position: absolute;
+        z-index: 19;
+        bottom: 0;
+        img {
+          width: 400px;
+        }
+        left: 12%;
+      }
+      .mobile-view {
+        position: absolute;
+        right: 10.5%;
+        top: 0;
+        img {
+          width: 400px;
+          height: 720px;
+          object-fit: cover;
+        }
+        z-index: 18;
+      }
+    }
+    .view-text {
+      position: absolute;
+      letter-spacing: 2px;
+      top: 80%;
+      left: 10%;
+      h2 {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1.3em;
+        max-width: 1100px;
+      }
+    }
+    .link:hover {
+      transform: scale(1.2);
+    }
+  }
+  .viewOverlayBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s;
+    z-index: 998;
+  }
+  .closeBtn:hover {
+    transform: scale(1.2);
+  }
+  .displayProject {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .overlayBg {
+    opacity: 0.6;
+  }
 }
 
 .contact {
@@ -294,8 +430,8 @@
       position: absolute;
       text-transform: uppercase;
       letter-spacing: 2px;
-      top: 50px;
-      left: 0%;
+      top: 80px;
+      left: 3%;
       h2 {
         font-size: 60px;
         span {
@@ -311,7 +447,7 @@
       left: 50%;
       transform: translate(-50%);
       background: white;
-      box-shadow: 2px 2px 95px black;
+      box-shadow: 0px 0px 25px black;
       .section-title {
         position: absolute;
         left: 50%;
@@ -339,15 +475,22 @@
             max-width: 600px;
             letter-spacing: 1px;
             margin-bottom: 20px;
+            opacity: 0.7;
           }
         }
         .connect {
           .social {
             font-size: 2em;
-            .icon {
+            a {
+              color: black;
               margin: 0 5px;
               cursor: pointer;
             }
+          }
+        }
+        .skills {
+          ul li {
+            list-style: none;
           }
         }
       }
@@ -368,7 +511,6 @@
   font-size: 1.8em;
   text-decoration: none;
   color: black;
-  box-shadow: 2px 4px 25px white;
   text-shadow: none;
   text-transform: uppercase;
   letter-spacing: 2px;
