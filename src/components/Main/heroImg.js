@@ -6,7 +6,7 @@ function Heroimg(){
               <div className="hero-img">
                      <div className="whiteBg"></div>
                      <div className="blackBg"></div>    
-                     <img src={personal} alt=""/>              
+                     <img loading="lazy" src={personal} alt=""/>              
               </div>
        )
 }

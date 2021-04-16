@@ -3,12 +3,14 @@ import LogoImg from "../../images/newlogo.png"
 import {Link} from "react-router-dom"
 
 
-function Logo({home}){
+function Logo({home, toggle, NavBtn}){
        return(
               <div className="logo">
                      <div className="logo-img">
                             <Link to="./">
-                            <img src={LogoImg} alt="" onClick={home}/>
+                            <img src={LogoImg} alt="" onClick={ ()=> {home(); if(NavBtn){
+                                   toggle()
+                            }}}/>
                             </Link>
                      </div>
                      <div className="logo-text">

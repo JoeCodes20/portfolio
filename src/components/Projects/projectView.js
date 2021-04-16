@@ -13,13 +13,13 @@ function ProjectView({DTImg, TImg, MImg, title, desc, show, closeProject, Link})
                      </div>
                      <div className="views">
                             <div className='desktop-view'>
-                                   <img src={DTImg} alt="" />
+                                   <img loading="lazy" src={DTImg} alt="" />
                             </div>
                             <div className="tablet-view">
-                                   <img src={TImg} alt="" />
+                                   <img loading="lazy" src={TImg} alt="" />
                             </div>
                             <div className='mobile-view'>
-                                   <img src={MImg} alt="" />
+                                   <img loading="lazy" src={MImg} alt="" />
                             </div>
                      </div>
                      <div className="view-text">

@@ -15,12 +15,16 @@ function App() {
   function home(){
     setActive(false)
   }
+  const [NavBtn, setNavBtn] = useState(false);
+  function toggle(){
+    setNavBtn(!NavBtn)
+  }
   return (
     <div className="App">
       <div className={`navBg ${!active? "home" : ""}`}></div>
       <div className={`header ${active? "shift" : ""}`}>
-        <Logo home={home}/>
-        <Nav navigate={navigate} home={home}/>
+        <Logo home={home} toggle={toggle} NavBtn={NavBtn}/>
+        <Nav navigate={navigate} home={home} NavBtn={NavBtn} toggle={toggle}/>
       </div>
       <Switch>
         <Route path="/" exact>

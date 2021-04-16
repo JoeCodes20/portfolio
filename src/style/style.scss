@@ -19,67 +19,18 @@
     align-items: center;
     justify-content: space-between;
     top: 5%;
-    left: 8%;
+    left: 50%;
     z-index: 99;
     transition: 0.3s;
+    transform: translate(-50%) scale(1);
+  }
+  .shift {
+    top: 0%;
+    transform: translate(0 -50%) scale(0.9);
   }
   text-decoration: none;
 }
-.navBg {
-  position: absolute;
-  z-index: 98;
-  background: black;
-  width: 100%;
-  height: 105px;
-  top: 0;
-  left: 0;
-  opacity: 0.2;
-  transition: 0.3s;
-  transform: translateY(0px);
-}
-.home {
-  opacity: 0;
-  transform: translateY(-120px);
-}
-.shift {
-  transform: translateY(-50px) scale(0.9);
-}
-.main {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  .main-container {
-    max-width: 1608px;
-    margin: 0 auto;
-    .main-btn {
-      position: absolute;
-      top: 800px;
-      padding: 0.5em 2em;
-      font-size: 25px;
-      cursor: pointer;
-      color: black;
-      opacity: 0.7;
-      background-color: white;
-      border: 1px solid black;
-      transition: 0.3s;
-      letter-spacing: 2px;
-    }
-    .scroll {
-      position: absolute;
-      top: 95%;
-      left: 50%;
-      opacity: 0.5;
-      color: black;
-      font-size: 3em;
-      transform: translateX(-50%);
-    }
-  }
-  .main-btn:hover {
-    color: white;
-    background-color: black;
-  }
-}
-
+// NAV and logo
 .logo {
   // position: fixed;
   display: flex;
@@ -106,8 +57,10 @@
 .nav {
   position: absolute;
   right: 0;
+  top: 30%;
+  height: 100%;
   a {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 1.7em;
     // text-decoration: none;
     margin: 0 1.5em;
@@ -121,8 +74,55 @@
     width: 50px;
     height: 50px;
     color: black;
+    box-shadow: 0px 1px 20px black;
+    transition: 0.2s;
+    display: none;
+    z-index: 100;
   }
 }
+.navBg {
+  position: absolute;
+  z-index: 98;
+  background: black;
+  width: 100%;
+  height: 105px;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  transition: 0.3s;
+  transform: translateY(0px);
+}
+.home {
+  opacity: 0;
+  transform: translateY(-120px);
+}
+.main {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  .main-container {
+    max-width: 1608px;
+    margin: 0 auto;
+    .main-btn {
+      position: absolute;
+      top: 800px;
+      padding: 0.5em 2em;
+      font-size: 25px;
+      cursor: pointer;
+      color: black;
+      opacity: 0.7;
+      background-color: white;
+      border: 1px solid black;
+      transition: 0.3s;
+      letter-spacing: 2px;
+    }
+  }
+  .main-btn:hover {
+    color: white;
+    background-color: black;
+  }
+}
+
 .hero-body {
   position: absolute;
   top: 350px;
@@ -189,15 +189,11 @@
     }
   }
 }
-//Nav mobile
-.hidden {
-  display: none;
-}
 
 //Projects
 .projects {
   position: relative;
-  min-height: 100vh;
+  height: 2500px;
   overflow: hidden;
   .project-title {
     position: absolute;
@@ -231,7 +227,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-row-gap: 40px;
+    grid-row-gap: 10px;
     article {
       position: relative;
       width: 300px;
@@ -242,7 +238,7 @@
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
       border-top-right-radius: 20px;
-      top: 35%;
+      top: 500px;
       img {
         position: relative;
         filter: grayscale(100%);
@@ -444,8 +440,7 @@
       width: 1400px;
       height: 600px;
       top: 30%;
-      left: 50%;
-      transform: translate(-50%);
+      left: 8%;
       background: white;
       box-shadow: 0px 0px 25px black;
       .section-title {
@@ -514,4 +509,598 @@
   text-shadow: none;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+.nav-mobile:hover {
+  transform: scale(1.3);
+}
+
+@media only screen and (min-width: 1601px) and (max-width: 2500px) {
+  .App {
+    .header {
+      width: 100%;
+      transform: translate(-50%) scale(1);
+    }
+    .shift {
+      transform: translate(-50%) scale(0.9);
+    }
+  }
+}
+@media only screen and (min-width: 1401px) and (max-width: 1600px) {
+  .App {
+    .header {
+      width: 100%;
+      transform: translate(-50%) scale(1);
+    }
+    .shift {
+      transform: translate(-50%) scale(0.9);
+    }
+  }
+  .main .main-container .main-btn {
+    font-size: 20px;
+    left: 40px;
+  }
+  .hero-body {
+    transform: scale(0.9);
+  }
+  .hero-body {
+    position: absolute;
+    top: 350px;
+    display: flex;
+    .hero-text {
+      position: relative;
+      letter-spacing: 2px;
+    }
+  }
+
+  .projects .view {
+    width: 100%;
+    .views {
+      transform: scale(0.8);
+      left: 0px;
+    }
+    .view-text {
+      position: absolute;
+      letter-spacing: 2px;
+      top: 75%;
+      left: 10%;
+      h2 {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1.3em;
+        max-width: 1100px;
+      }
+    }
+    .link {
+      font-size: 2.5em;
+      top: 72%;
+    }
+  }
+  .contact .contact-container .contact-section {
+    position: absolute;
+    top: 30%;
+    left: 4%;
+    transform: scale(0.8);
+  }
+}
+@media only screen and (min-width: 1080px) and (max-width: 1400px) {
+  .main .main-container .main-btn {
+    font-size: 20px;
+    left: 300px;
+  }
+  .hero-body {
+    transform: scale(1.1);
+  }
+  .hero-body {
+    position: absolute;
+    top: 360px;
+    left: 19%;
+    display: flex;
+    flex-direction: column;
+    .hero-text {
+      position: relative;
+      letter-spacing: 2px;
+    }
+
+    .hero-img {
+      position: absolute;
+      margin-left: 5em;
+      transform: scale(0.7);
+      top: -250px;
+      right: -50px;
+    }
+  }
+  .projects .view {
+    width: 100%;
+    .views {
+      transform: scale(0.8);
+      left: 0px;
+    }
+  }
+  .nav {
+    top: 30%;
+    .nav-list {
+      position: absolute;
+      top: 70px;
+      right: -190px;
+      background: black;
+      width: 320px;
+      height: 1800px;
+      opacity: 0.7;
+      transform: translateX(235px);
+      transition: 0.3s;
+    }
+    a {
+      color: rgb(255, 255, 255);
+      font-size: 1.7em;
+      text-decoration: none;
+      margin: 5em 1em;
+      text-shadow: 5px 2px 5px black;
+      transition: 0.3s;
+      display: flex;
+      opacity: 1;
+    }
+    .nav-mobile {
+      position: absolute;
+      top: 0;
+      right: 50px;
+      width: 50px;
+      height: 50px;
+      color: rgb(0, 0, 0);
+      box-shadow: 0px 1px 20px black;
+      transition: 0.2s;
+      display: block;
+      z-index: 100;
+    }
+    .show-mobile-nav {
+      transform: translateX(0px);
+    }
+  }
+  .projects {
+    height: 2100px;
+    .projects-container {
+      top: 0px;
+      height: 1600px;
+    }
+  }
+  .projects .view {
+    width: 100%;
+    .views {
+      transform: scale(0.6);
+      left: -200px;
+    }
+    .view-text {
+      position: absolute;
+      letter-spacing: 2px;
+      top: 75%;
+      left: 10%;
+      max-width: 900px;
+    }
+    .link {
+      font-size: 2.5em;
+      top: 72%;
+    }
+  }
+  .contact .contact-container .contact-section {
+    position: absolute;
+    top: 30%;
+    left: -10%;
+    transform: scale(0.7);
+  }
+  .nav a:hover {
+    font-size: 1.8em;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-shadow: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+@media only screen and (max-width: 1079px) {
+  .App {
+    .header {
+      width: 170%;
+      transform: translate(-50%) scale(0.6);
+    }
+    .shift {
+      transform: translate(-50%) scale(0.6);
+    }
+  }
+  .main .main-container .main-btn {
+    font-size: 20px;
+    left: 120px;
+  }
+  .hero-body {
+    transform: scale(0.8);
+  }
+  .hero-body {
+    position: absolute;
+    top: 200px;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    .hero-text {
+      position: relative;
+      letter-spacing: 2px;
+      top: 180px;
+    }
+
+    .hero-img {
+      position: absolute;
+      margin-left: 5em;
+      transform: scale(0.7);
+      top: -200px;
+      right: -50px;
+    }
+  }
+  .logo {
+    transform: scale(0.8);
+  }
+  .nav {
+    top: 30%;
+    .nav-list {
+      position: absolute;
+      top: 100px;
+      right: -100px;
+      background: black;
+      width: 320px;
+      height: 1800px;
+      opacity: 0.7;
+      transform: translateX(305px);
+      transition: 0.3s;
+    }
+    a {
+      color: rgb(255, 255, 255);
+      font-size: 1.7em;
+      text-decoration: none;
+      margin: 5em 1em;
+      text-shadow: 5px 2px 5px black;
+      transition: 0.3s;
+      display: flex;
+      opacity: 1;
+    }
+    .nav-mobile {
+      position: absolute;
+      top: 0;
+      right: 50px;
+      width: 50px;
+      height: 50px;
+      color: rgb(0, 0, 0);
+      box-shadow: 0px 1px 20px black;
+      transition: 0.2s;
+      display: block;
+      z-index: 100;
+    }
+    .show-mobile-nav {
+      transform: translateX(0px);
+    }
+  }
+  .projects {
+    height: 2800px;
+    .projects-container {
+      top: 0px;
+      height: 2300px;
+    }
+  }
+  .projects .view {
+    width: 100%;
+    .views {
+      top: -40px;
+      transform: scale(0.3);
+      left: -450px;
+    }
+    .view-text {
+      position: absolute;
+      letter-spacing: 2px;
+      top: 45%;
+      left: 10%;
+      max-width: 700px;
+    }
+    .link {
+      font-size: 2.5em;
+      top: 45%;
+    }
+  }
+  .contact .contact-container .contact-section {
+    position: absolute;
+    top: 15%;
+    left: 50px;
+    transform: scale(0.8);
+    width: 600px;
+    height: 950px;
+    .section-title {
+      position: absolute;
+      top: 5%;
+      left: 55%;
+      font-size: 2.4em;
+      width: 500px;
+    }
+    .section-text {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      bottom: 10%;
+    }
+  }
+  .nav a:hover {
+    font-size: 1.7em;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-shadow: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+@media only screen and (min-width: 461px) and (max-width: 625px) {
+  .App {
+    .header {
+      width: 180%;
+      transform: translate(-50%) scale(0.6);
+    }
+    .shift {
+      transform: translate(-50%) scale(0.6);
+    }
+  }
+  .main .main-container .main-btn {
+    font-size: 20px;
+    left: 30px;
+  }
+  .hero-body {
+    transform: scale(0.7);
+  }
+  .hero-body {
+    position: absolute;
+    top: 200px;
+    left: -10%;
+    display: flex;
+    flex-direction: column;
+    .hero-text {
+      position: relative;
+      letter-spacing: 2px;
+      top: 180px;
+    }
+
+    .hero-img {
+      position: absolute;
+      margin-left: 5em;
+      transform: scale(0.7);
+      top: -200px;
+      right: -50px;
+    }
+  }
+  .logo {
+    transform: scale(0.8);
+  }
+  .nav {
+    top: 30%;
+    .nav-list {
+      position: absolute;
+      top: 100px;
+      right: -100px;
+      background: black;
+      width: 320px;
+      height: 1800px;
+      opacity: 0.7;
+      transform: translateX(235px);
+      transition: 0.3s;
+    }
+    a {
+      color: rgb(255, 255, 255);
+      font-size: 1.7em;
+      text-decoration: none;
+      margin: 5em 1em;
+      text-shadow: 5px 2px 5px black;
+      transition: 0.3s;
+      display: flex;
+      opacity: 1;
+    }
+    .nav-mobile {
+      position: absolute;
+      top: 0;
+      right: 50px;
+      width: 50px;
+      height: 50px;
+      color: rgb(0, 0, 0);
+      box-shadow: 0px 1px 20px black;
+      transition: 0.2s;
+      display: block;
+      z-index: 100;
+    }
+    .show-mobile-nav {
+      transform: translateX(0px);
+    }
+  }
+  .projects {
+    height: 2800px;
+    .projects-container {
+      top: 0px;
+      height: 2300px;
+    }
+  }
+  .projects .view {
+    width: 100%;
+    .views {
+      top: -40px;
+      transform: scale(0.3);
+      left: -480px;
+    }
+    .view-text {
+      position: absolute;
+      letter-spacing: 2px;
+      top: 45%;
+      left: 10%;
+      max-width: 700px;
+    }
+    .link {
+      font-size: 2.5em;
+      top: 45%;
+    }
+  }
+  .contact .contact-container .contact-section {
+    position: absolute;
+    top: 10%;
+    left: -20px;
+    transform: scale(0.7);
+    width: 600px;
+    height: 950px;
+    .section-title {
+      position: absolute;
+      top: 5%;
+      left: 55%;
+      font-size: 2.4em;
+      width: 500px;
+    }
+    .section-text {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      bottom: 10%;
+    }
+  }
+  .nav a:hover {
+    font-size: 1.7em;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-shadow: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 460px) {
+  .App {
+    .header {
+      width: 180%;
+      transform: translate(-50%) scale(0.6);
+    }
+    .shift {
+      transform: translate(-50%) scale(0.6);
+    }
+  }
+  .main .main-container .main-btn {
+    font-size: 20px;
+    left: 30px;
+  }
+  .hero-body {
+    transform: scale(0.7);
+  }
+  .hero-body {
+    position: absolute;
+    top: 200px;
+    left: -10%;
+    display: flex;
+    flex-direction: column;
+    .hero-text {
+      position: relative;
+      letter-spacing: 2px;
+      top: 180px;
+    }
+
+    .hero-img {
+      position: absolute;
+      margin-left: 5em;
+      transform: scale(0.7);
+      top: -200px;
+      right: -50px;
+    }
+  }
+  .logo {
+    transform: scale(0.7);
+  }
+  .nav {
+    top: 30%;
+    .nav-list {
+      position: absolute;
+      top: 100px;
+      right: -100px;
+      background: black;
+      width: 320px;
+      height: 1800px;
+      opacity: 0.7;
+      transform: translateX(235px);
+      transition: 0.3s;
+    }
+    a {
+      color: rgb(255, 255, 255);
+      font-size: 1.7em;
+      text-decoration: none;
+      margin: 5em 1em;
+      text-shadow: 5px 2px 5px black;
+      transition: 0.3s;
+      display: flex;
+      opacity: 1;
+    }
+    .nav-mobile {
+      position: absolute;
+      top: 0;
+      right: 50px;
+      width: 50px;
+      height: 50px;
+      color: rgb(0, 0, 0);
+      box-shadow: 0px 1px 20px black;
+      transition: 0.2s;
+      display: block;
+      z-index: 100;
+    }
+    .show-mobile-nav {
+      transform: translateX(0px);
+    }
+  }
+  .projects {
+    height: 2800px;
+    .projects-container {
+      top: 0px;
+      height: 2300px;
+    }
+  }
+  .projects .view {
+    width: 100%;
+    .views {
+      top: -20px;
+      transform: scale(0.25);
+      left: -600px;
+    }
+    .view-text {
+      position: absolute;
+      letter-spacing: 2px;
+      top: 45%;
+      left: 10%;
+      max-width: 700px;
+    }
+    .link {
+      font-size: 2.5em;
+      top: 45%;
+    }
+  }
+  .contact .contact-container .contact-section {
+    position: absolute;
+    top: 10%;
+    left: -100px;
+    transform: scale(0.6);
+    width: 600px;
+    height: 950px;
+    .section-title {
+      position: absolute;
+      top: 5%;
+      left: 55%;
+      font-size: 2.4em;
+      width: 500px;
+    }
+    .section-text {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      bottom: 10%;
+    }
+  }
+  .nav a:hover {
+    font-size: 1.7em;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-shadow: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
 }
