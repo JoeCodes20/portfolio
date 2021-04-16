@@ -12,9 +12,6 @@ function Main({navigate}){
               <motion.div variants={pageAnimation} initial="hidden" animate="show" className="main">
                      <div className="main-container">
                             <div className="hero-body">
-                                   {/* <div>
-                                          <HeroImg />
-                                   </div> */}
                                    <div>
                                           <HeroText />
                                    </div>

@@ -11,6 +11,13 @@ export const pageAnimation = {
                      duration: 1,
                      staggerChildren: .75
               }
+       },
+       exit: {
+              opacity: 0,
+              y : 300,
+              transition: {
+                     duration: 1
+              }
        }
 }
 export const first ={

@@ -5,6 +5,7 @@ import Main from "./components/Main/main"
 import Projects from "./components/Projects/projects"
 import Contact from "./components/Contact/contact"
 import {Switch, Route} from "react-router-dom"
+import {AnimatePresence} from "framer-motion"
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Logo home={home} toggle={toggle} NavBtn={NavBtn}/>
         <Nav navigate={navigate} home={home} NavBtn={NavBtn} toggle={toggle}/>
       </div>
+      <AnimatePresence exitBeforeEnter>
       <Switch>
         <Route path="/" exact>
           <Main navigate={navigate} />
@@ -37,6 +39,7 @@ function App() {
           <Contact />
         </Route>
       </Switch>
+      </AnimatePresence>
     </div>
   );
 }
