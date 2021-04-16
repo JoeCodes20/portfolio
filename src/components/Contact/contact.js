@@ -23,7 +23,7 @@ function Contact(){
                                                  <h2>Personal Information</h2>
                                                  <hr/>
                                                  <br/>
-                                                 <p>I prefer communication to handled through email rather than over the phone, simply because I might me besy working or due to the time difference. Below is my contact information and thank you in advance.</p>
+                                                 <p>I prefer communication to handled through email rather than over the phone, simply because I might me besy working or due to the time difference. Below is my contact information and thank you <br/> <br/> -Joseph Adeyanju</p>
                                                  <h4>Email: <span>TransparentVfx@gmail.com</span></h4>
                                                  <h4>Phone: <span>+1 317-480-2920</span></h4>
                                           </div>
