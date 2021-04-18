@@ -43,8 +43,6 @@
 
 .App .shift {
   top: 0%;
-  -webkit-transform: translate(0 -50%) scale(0.9);
-          transform: translate(0 -50%) scale(0.9);
 }
 
 .logo {
@@ -704,6 +702,15 @@
 }
 
 @media only screen and (min-width: 1080px) and (max-width: 1400px) {
+  .App .header {
+    width: 90%;
+    -webkit-transform: translate(-50%) scale(1);
+            transform: translate(-50%) scale(1);
+  }
+  .App .shift {
+    -webkit-transform: translate(-45%) scale(0.9);
+            transform: translate(-45%) scale(0.9);
+  }
   .main .main-container .main-btn {
     font-size: 20px;
     left: 300px;
@@ -749,7 +756,7 @@
   }
   .nav .nav-list {
     position: absolute;
-    top: 70px;
+    top: 75px;
     right: -190px;
     background: black;
     width: 320px;
