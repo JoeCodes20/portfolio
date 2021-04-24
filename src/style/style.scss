@@ -10,10 +10,15 @@
 }
 // Main App
 .App {
-  background: url("/src/images/portfolio-bg.png");
+  // background: url("/src/images/portfolio-bg.png");
   background-repeat: no-repeat;
   object-fit: cover;
   overflow-x: hidden;
+  .border {
+    margin: 1em;
+    border: 5px solid black;
+    height: 100%;
+  }
   .header {
     max-width: 1608px;
     margin: 0 auto;
@@ -60,16 +65,20 @@
 }
 .nav {
   position: absolute;
-  right: 0;
+  right: 20px;
   top: 30%;
   height: 100%;
   a {
     color: rgb(255, 255, 255);
     font-size: 1.7em;
-    // text-decoration: none;
-    margin: 0 1.5em;
+    text-decoration: none;
+    margin: 0 1em;
     text-shadow: 5px 2px 5px black;
     transition: 0.3s;
+    padding: 0.2em;
+    i {
+      padding: 0 10px;
+    }
   }
   .nav-mobile {
     position: absolute;
@@ -86,7 +95,7 @@
   }
 }
 .navBg {
-  position: absolute;
+  position: fixed;
   z-index: 98;
   background: black;
   width: 100%;
@@ -161,12 +170,14 @@
   .hero-img {
     position: absolute;
     margin-left: 5em;
+    box-shadow: 2px 2px 50px black;
     img {
       z-index: 2;
       position: relative;
       width: 500px;
       filter: grayscale(100%);
       transition: 0.3s;
+      // box-shadow: 2px 2px 50px black;
     }
     .whiteBg {
       position: absolute;
@@ -179,6 +190,7 @@
       margin-top: -15em;
       z-index: 1;
       opacity: 0.2;
+      box-shadow: 8px 8px 300px black;
     }
     .blackBg {
       position: absolute;
@@ -191,6 +203,7 @@
       margin-top: -15em;
       z-index: 0;
       opacity: 0.8;
+      box-shadow: 2px 2px 50px black;
     }
   }
 }

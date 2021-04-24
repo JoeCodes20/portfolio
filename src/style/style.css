@@ -10,12 +10,17 @@
 }
 
 .App {
-  background: url("/src/images/portfolio-bg.png");
   background-repeat: no-repeat;
   -o-object-fit: cover;
      object-fit: cover;
   overflow-x: hidden;
   text-decoration: none;
+}
+
+.App .border {
+  margin: 1em;
+  border: 5px solid black;
+  height: 100%;
 }
 
 .App .header {
@@ -79,7 +84,7 @@
 
 .nav {
   position: absolute;
-  right: 0;
+  right: 20px;
   top: 30%;
   height: 100%;
 }
@@ -87,10 +92,16 @@
 .nav a {
   color: white;
   font-size: 1.7em;
-  margin: 0 1.5em;
+  text-decoration: none;
+  margin: 0 1em;
   text-shadow: 5px 2px 5px black;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  padding: 0.2em;
+}
+
+.nav a i {
+  padding: 0 10px;
 }
 
 .nav .nav-mobile {
@@ -110,7 +121,7 @@
 }
 
 .navBg {
-  position: absolute;
+  position: fixed;
   z-index: 98;
   background: black;
   width: 100%;
@@ -200,6 +211,8 @@
 .hero-body .hero-img {
   position: absolute;
   margin-left: 5em;
+  -webkit-box-shadow: 2px 2px 50px black;
+          box-shadow: 2px 2px 50px black;
 }
 
 .hero-body .hero-img img {
@@ -224,6 +237,8 @@
   margin-top: -15em;
   z-index: 1;
   opacity: 0.2;
+  -webkit-box-shadow: 8px 8px 300px black;
+          box-shadow: 8px 8px 300px black;
 }
 
 .hero-body .hero-img .blackBg {
@@ -238,6 +253,8 @@
   margin-top: -15em;
   z-index: 0;
   opacity: 0.8;
+  -webkit-box-shadow: 2px 2px 50px black;
+          box-shadow: 2px 2px 50px black;
 }
 
 .projects {

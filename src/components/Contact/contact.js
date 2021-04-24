@@ -5,6 +5,7 @@ import {FaTwitter} from "react-icons/fa"
 import {FaFacebookSquare} from "react-icons/fa"
 import {motion} from "framer-motion"
 import {pageAnimation} from "../../animation"
+import {Link} from "react-router-dom"
 
 function Contact(){
        return(
@@ -32,10 +33,10 @@ function Contact(){
                                                  <hr/>
                                                  <br/>
                                                  <div className="social">
-                                                 <a href="https://github.com/JoeCodes20"><FaGithub /></a>
-                                                 <a href="https://www.linkedin.com/in/joseph-adeyanju-669942200/"><FaLinkedin /></a>
-                                                 <a href="https://twitter.com/JosephCoding"><FaTwitter /></a>
-                                                 <a href=""><FaFacebookSquare /></a>
+                                                 <Link href="https://github.com/JoeCodes20"><FaGithub /></Link>
+                                                 <Link href="https://www.linkedin.com/in/joseph-adeyanju-669942200/"><FaLinkedin /></Link>
+                                                 <Link href="https://twitter.com/JosephCoding"><FaTwitter /></Link>
+                                                 <Link href=""><FaFacebookSquare /></Link>
                                                  </div>
                                           </div>
                                           <div className="skills text">

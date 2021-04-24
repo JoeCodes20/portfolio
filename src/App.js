@@ -22,6 +22,7 @@ function App() {
   }
   return (
     <div className="App">
+    <div className="border">
       <div className={`navBg ${!active? "home" : ""}`}></div>
       <div className={`header ${active? "shift" : ""}`}>
         <Logo home={home} toggle={toggle} NavBtn={NavBtn}/>
@@ -40,6 +41,7 @@ function App() {
         </Route>
       </Switch>
       </AnimatePresence>
+      </div>
     </div>
   );
 }
