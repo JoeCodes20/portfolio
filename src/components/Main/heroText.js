@@ -9,7 +9,9 @@ function Herotext(){
                             <h3>Devloper</h3>
                      </div>
                      <div className="desc">
-                            <p>Began developing last year and have committed my time to it, From the time I wrote my first line of code. I have had a strong desire to learn this craft to the fullest. So much so that when covid-19 hit I had a choice to make, whether I dedicate my time to programming or continue walking a path I knew was not for me. I have dedicated my time to self-teaching code and I would love the opportunity to work with you as I continue to expand my knowledge of programming.</p>
+                            <p>I began programming 4 years ago from the first time I wrote “Hello World” and have committed my time to it, I have dedicated my time to self-teaching code and have disciplined myself to learn many languages
+I humbly thank you for your consideration and would love the opportunity to work for your company as I continue to expand my knowledge of programming.
+</p>
                             <br/>
                             <hr/>
                      </div>
